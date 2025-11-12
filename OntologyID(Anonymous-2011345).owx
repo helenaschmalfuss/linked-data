@@ -1,0 +1,645 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#ArmBone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Arthritis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Disease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#FixedJoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Fracture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Joint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#LegBone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Movement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Osteoporosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Protection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Skull"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Spine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#Support"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/skeletal#SynovialJoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://example.org/skeletal#affectedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://example.org/skeletal#connectsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://example.org/skeletal#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://example.org/skeletal#performs"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://example.org/skeletal#hasDensity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://example.org/skeletal#hasLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://example.org/skeletal#hasMobility"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://example.org/skeletal#hasName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://webprotege.stanford.edu/RCUBJFVzpIitR3hAwAcixnl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://example.org/skeletal#Femur"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://example.org/skeletal#KneeJoint"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://example.org/skeletal#ElbowJoint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://example.org/skeletal#SkullBone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://example.org/skeletal#Humerus"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#ArmBone"/>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#ArmBone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://example.org/skeletal#connectsTo"/>
+            <Class IRI="http://example.org/skeletal#Joint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Arthritis"/>
+        <Class IRI="http://example.org/skeletal#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://example.org/skeletal#connectsTo"/>
+            <Class IRI="http://example.org/skeletal#Joint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Disease"/>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#FixedJoint"/>
+        <Class IRI="http://example.org/skeletal#Joint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Fracture"/>
+        <Class IRI="http://example.org/skeletal#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Function"/>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Joint"/>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#LegBone"/>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#LegBone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://example.org/skeletal#connectsTo"/>
+            <Class IRI="http://example.org/skeletal#Joint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Movement"/>
+        <Class IRI="http://example.org/skeletal#Function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Osteoporosis"/>
+        <Class IRI="http://example.org/skeletal#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Protection"/>
+        <Class IRI="http://example.org/skeletal#Function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://example.org/skeletal#affectedBy"/>
+            <Class IRI="http://example.org/skeletal#Disease"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://example.org/skeletal#hasPart"/>
+            <Class IRI="http://example.org/skeletal#Bone"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://example.org/skeletal#hasPart"/>
+            <Class IRI="http://example.org/skeletal#Joint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://example.org/skeletal#performs"/>
+            <Class IRI="http://example.org/skeletal#Function"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Skull"/>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Skull"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://example.org/skeletal#connectsTo"/>
+            <Class IRI="http://example.org/skeletal#Joint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Spine"/>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Spine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://example.org/skeletal#connectsTo"/>
+            <Class IRI="http://example.org/skeletal#Joint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#Support"/>
+        <Class IRI="http://example.org/skeletal#Function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://example.org/skeletal#SynovialJoint"/>
+        <Class IRI="http://example.org/skeletal#Joint"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://example.org/skeletal#Joint"/>
+        <NamedIndividual IRI="http://example.org/skeletal#ElbowJoint"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+        <NamedIndividual IRI="http://example.org/skeletal#Femur"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+        <NamedIndividual IRI="http://example.org/skeletal#Humerus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://example.org/skeletal#Joint"/>
+        <NamedIndividual IRI="http://example.org/skeletal#KneeJoint"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+        <NamedIndividual IRI="http://example.org/skeletal#SkullBone"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://example.org/skeletal#affectedBy"/>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://example.org/skeletal#connectsTo"/>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://example.org/skeletal#hasPart"/>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://example.org/skeletal#performs"/>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://example.org/skeletal#affectedBy"/>
+        <Class IRI="http://example.org/skeletal#Disease"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://example.org/skeletal#connectsTo"/>
+        <Class IRI="http://example.org/skeletal#Joint"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://example.org/skeletal#hasPart"/>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://example.org/skeletal#performs"/>
+        <Class IRI="http://example.org/skeletal#Function"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://example.org/skeletal#hasDensity"/>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://example.org/skeletal#hasLength"/>
+        <Class IRI="http://example.org/skeletal#Bone"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://example.org/skeletal#hasMobility"/>
+        <Class IRI="http://example.org/skeletal#Joint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://example.org/skeletal#hasName"/>
+        <Class IRI="http://example.org/skeletal#SkeletalDomain"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://example.org/skeletal#hasDensity"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://example.org/skeletal#hasLength"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://example.org/skeletal#hasMobility"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://example.org/skeletal#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#ArmBone</IRI>
+        <Literal xml:lang="en">anatomical structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#ArmBone</IRI>
+        <Literal xml:lang="pt-br">estrutura anatômica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#ArmBone</IRI>
+        <Literal xml:lang="en">Arm bone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#ArmBone</IRI>
+        <Literal xml:lang="es">Hueso del brazo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#ArmBone</IRI>
+        <Literal xml:lang="pt-br">Osso do braço</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Arthritis</IRI>
+        <Literal xml:lang="en">any of several joint disorders, some autoimmune, some infectious</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Arthritis</IRI>
+        <Literal xml:lang="pt-br">inflamação articular aguda ou crônica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Arthritis</IRI>
+        <Literal xml:lang="en">Arthritis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Arthritis</IRI>
+        <Literal xml:lang="pt-br">Artrite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Bone</IRI>
+        <Literal xml:lang="en">Rigid organ that constitutes part of the endoskeleton of vertebrates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Bone</IRI>
+        <Literal xml:lang="pt-br">Órgão rígido que constitui parte do endoesqueleto de alguns vertebrados</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Bone</IRI>
+        <Literal xml:lang="en">Bone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Bone</IRI>
+        <Literal xml:lang="es">Hueso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Bone</IRI>
+        <Literal xml:lang="pt-br">Osso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://example.org/skeletal#Bone</IRI>
+        <Literal xml:lang="en">bones, bone organ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Disease</IRI>
+        <Literal xml:lang="en">abnormal condition negatively affecting organisms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Disease</IRI>
+        <Literal xml:lang="pt-br">condição anormal que afeta negativamente um organismo, distúrbio de um órgão</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Disease</IRI>
+        <Literal xml:lang="en">Disease</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Disease</IRI>
+        <Literal xml:lang="pt-br">Doença</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://example.org/skeletal#Disease</IRI>
+        <Literal xml:lang="pt-br">mal, condição médica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://example.org/skeletal#Disease</IRI>
+        <Literal xml:lang="en">medical condition, medical disorder, illness, sickness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#ElbowJoint</IRI>
+        <Literal xml:lang="pt-br">Articulação do cotovelo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Femur</IRI>
+        <Literal xml:lang="pt-br">Fêmur</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#FixedJoint</IRI>
+        <Literal>Articulação fixa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#FixedJoint</IRI>
+        <Literal xml:lang="en">Fixed joint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Fracture</IRI>
+        <Literal xml:lang="en">medical condition in which there is physical damage to the continuity of the bones</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Fracture</IRI>
+        <Literal xml:lang="pt-br">quebra ou rompimento total ou parcial de um osso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Fracture</IRI>
+        <Literal xml:lang="en">Fracture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Fracture</IRI>
+        <Literal xml:lang="pt-br">Fratura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Function</IRI>
+        <Literal xml:lang="en">Function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Function</IRI>
+        <Literal xml:lang="pt-br">Função</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Joint</IRI>
+        <Literal xml:lang="en">anatomical site where two or more bones or exoskeleton segments are abutted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Joint</IRI>
+        <Literal xml:lang="pt-br">local anatômico onde dois ou mais ossos ou segmentos do exoesqueleto se encontram justapostos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Joint</IRI>
+        <Literal xml:lang="pt-br">Articulação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Joint</IRI>
+        <Literal xml:lang="en">Joint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://example.org/skeletal#Joint</IRI>
+        <Literal xml:lang="en">articulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#LegBone</IRI>
+        <Literal xml:lang="en">anatomical structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#LegBone</IRI>
+        <Literal xml:lang="pt-br">estrutura anatômica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#LegBone</IRI>
+        <Literal xml:lang="en">Leg bone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#LegBone</IRI>
+        <Literal xml:lang="pt-br">Osso da perna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Movement</IRI>
+        <Literal xml:lang="en">Movement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Movement</IRI>
+        <Literal xml:lang="pt-br">Movimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Osteoporosis</IRI>
+        <Literal xml:lang="en">bone resorption disease characterized by the thinning of bone tissue and decreased mechanical strength</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Osteoporosis</IRI>
+        <Literal xml:lang="pt-br">doença que provoca o desgaste da densidade da estrutura óssea</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Osteoporosis</IRI>
+        <Literal xml:lang="en">Osteoporosis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Osteoporosis</IRI>
+        <Literal xml:lang="pt-br">Ostoporose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Protection</IRI>
+        <Literal xml:lang="en">Protect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Protection</IRI>
+        <Literal xml:lang="pt-br">Proteger</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Skull</IRI>
+        <Literal xml:lang="en">bony structure that forms the skeleton of head in most vertebrates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Skull</IRI>
+        <Literal xml:lang="pt-br">estrutura óssea que forma o esqueleto da cabeça</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Skull</IRI>
+        <Literal xml:lang="pt-br">Crânio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Skull</IRI>
+        <Literal xml:lang="en">Skull</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Spine</IRI>
+        <Literal xml:lang="en">bony structure found in vertebrates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#Spine</IRI>
+        <Literal xml:lang="pt-br">ossos irregulares interligados por articulações que compõem a estrutura dos vertebrados</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Spine</IRI>
+        <Literal xml:lang="pt-br">Espinha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Spine</IRI>
+        <Literal xml:lang="en">Spine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://example.org/skeletal#Spine</IRI>
+        <Literal xml:lang="pt-br">Coluna vertebral</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://example.org/skeletal#Spine</IRI>
+        <Literal xml:lang="en">Vertebral column</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Support</IRI>
+        <Literal xml:lang="pt-br">Apoio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#Support</IRI>
+        <Literal xml:lang="en">Support</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://example.org/skeletal#SynovialJoint</IRI>
+        <Literal xml:lang="pt-br">articulação que permite grande mobilidade entre os ossos, preenchida por líquido sinovial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#SynovialJoint</IRI>
+        <Literal xml:lang="pt-br">Articulação sinovial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://example.org/skeletal#SynovialJoint</IRI>
+        <Literal xml:lang="en">Synovial joint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RCUBJFVzpIitR3hAwAcixnl</IRI>
+        <Literal xml:lang="en">desc[</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+
